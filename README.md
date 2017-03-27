@@ -43,7 +43,7 @@ public class test {
 ```
 
 ###   web-API
-web.util目录有test.html作为示例代码，本示例默认使用ajax通讯，使用者当然也可以根据需要选择自己的通讯方式，甚至可以直接拼接url在浏览器直接访问api。使用示例如下：
+web.util目录有test.html作为示例代码，本示例默认使用ajax通讯，使用者当然也可以根据需要选择自己的通讯方式，甚至可以直接拼接url在浏览器直接访问api,但是一定注意跨域问题“jsonp”。使用示例如下：
 
 ```
 <!DOCTYPE HTML>
@@ -106,8 +106,9 @@ web.util目录有test.html作为示例代码，本示例默认使用ajax通讯�
 							code:"******"//验证码
 						},
 						
-						dataType: 'json',
 						
+						dataType: 'jsonp',
+						jsonp: "callback",
 						success: function(data) {
 							console.log(JSON.stringify(data));
 							
@@ -129,8 +130,9 @@ web.util目录有test.html作为示例代码，本示例默认使用ajax通讯�
 							tokenid:"******"//唯一标识
 						},
 						
-						dataType: 'json',
 						
+						dataType: 'jsonp',
+						jsonp: "callback",
 						success: function(data) {
 							
 							console.log(JSON.stringify(data));
