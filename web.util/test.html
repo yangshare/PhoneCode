@@ -58,7 +58,9 @@
 							code:"******"//验证码
 						},
 						
-						dataType: 'json',
+						dataType: 'jsonp',
+						jsonp: "callback",
+						jsonpCallback: "callback",
 						
 						success: function(data) {
 							console.log(JSON.stringify(data));
@@ -84,7 +86,9 @@
 							tokenid:"******"//唯一标识
 						},
 						
-						dataType: 'json',
+						dataType: 'jsonp',
+						jsonp: "callback",
+						jsonpCallback: "callback",
 						
 						success: function(data) {
 							
